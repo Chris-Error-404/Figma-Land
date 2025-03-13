@@ -51,3 +51,9 @@ ul{
 button{
     vertical-align: middle;
 }
+
+/* footer */
+div.footer-container{
+    width: 100%;
+    background-color: var(--color-black);
+}
