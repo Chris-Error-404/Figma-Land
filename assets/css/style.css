@@ -56,4 +56,22 @@ button{
 div.footer-container{
     width: 100%;
     background-color: var(--color-black);
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
+
+/* .footer-logo-container{
+    padding-left: 4em;
+} */
+
+.footer-logo-container img{
+    width: 15%;
+    height: auto;
+}
+
+.footer-navbar-container{
+    display: flex;
+}
+
