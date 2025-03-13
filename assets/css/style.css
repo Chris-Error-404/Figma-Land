@@ -1,0 +1,53 @@
+/* import worksans fnt from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Work Sans', Arial, sans-serif;
+}
+
+/* root */
+:root{
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    line-height: 1.5em;
+    -webkit-transition: all 0.5s ease;
+    transition:  all 0.5s;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-white);
+    -webkit-transition: all 0.3s ease;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+ul{
+    margin: 0em;
+    padding: 0em;
+}
+
+button{
+    vertical-align: middle;
+}
