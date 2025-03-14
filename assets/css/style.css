@@ -57,6 +57,7 @@ button{
 footer{
     border: 1px solid red;
 }
+
 .footer-container{
     padding: 2em 4em;
     display: flex;
