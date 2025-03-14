@@ -64,7 +64,7 @@ button{
 .footer-navbar{
     display: flex;
     flex-direction: row;
-    gap: 3em;
+    gap: 4em;
 }
 
 .footer-navbar h4{
@@ -76,7 +76,7 @@ button{
 .footer-navbar ul{
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.8em;
 }
 
 .footer-navbar a:hover{
