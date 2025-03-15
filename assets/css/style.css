@@ -92,10 +92,10 @@ button{
     text-align: center;
 }
 
-.btn {
+.login-container .btn {
     border: 1px solid var(--color-white);
     background: none;
-    padding: 0.8em 2.6em;
+    padding: 0.8em 2.5em;
     font-size: 1em;
     cursor: pointer;
     margin: 10px;
@@ -133,6 +133,116 @@ button{
     height: 180%;
 }
 /* end HEADER */
+
+
+
+/* Keyframes for fade-up effect */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container styling */
+section.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+div.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.hero-text-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Initial state for h1 elements */
+.hero-text-1 h1 {
+    font-size: 4em;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Active state to trigger the animation */
+.hero-text-1 h1.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+div.hero-text-2{
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+}
+
+.hero-text-2 p{
+    font: 1em;
+}
+
+section.hero-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.hero-button-container .btn{
+    border: 1px solid var(--color-white);
+    background: none;
+    padding: 0.8em 1.7em;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0.7em;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-button-container .btn3{
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+}
+
+.hero-button-container .btn:hover{
+    border: 1px solid var(--color-primary);
+}
+
+.hero-button-container .btn3:hover{
+    background-color: #333fc3;
+    border: 1px solid #333fc3;
+}
+/* end HERO */
 
 
 
@@ -211,61 +321,3 @@ button{
 /* end FOOTER */
 
 
-
-/* HERO */
-section.hero-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 4em;
-    margin-bottom: 2em;
-}
-
-div.hero-text-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-div.hero-text-1{
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    padding: 1em;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-text-1 h1{
-    font-size: 4em;
-    font-weight: 600;
-}
-
-div.hero-text-2{
-    padding: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 60%;
-}
-
-.hero-text-2 p{
-    font: 1em;
-}
-
-section.hero-button-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-
-/* end HERO */
