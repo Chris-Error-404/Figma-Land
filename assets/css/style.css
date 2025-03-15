@@ -246,6 +246,21 @@ section.hero-button-container{
 
 
 
+/* sub_hero */
+section.hero-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.hero-img-container img{
+    width: 100%;
+    height: auto;
+}
+/* end sub_hero */
+
+
 /* FOOTER */
 .footer-container{
     padding: 2em 4em;
