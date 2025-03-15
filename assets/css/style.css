@@ -18,6 +18,7 @@
     --color-light-grey: #f4f4f4;
     --color-black: #000;
     --color-primary: #4452fe;
+    --color-dark-primary: #333fc3;
 }
 
 html{
@@ -39,7 +40,7 @@ a{
     color: var(--color-white);
     -webkit-transition: all 0.3s ease;
     transition: 0.3s ease;
-    cursor: pointer;
+    cursor: none;
 }
 
 ul,ol,li{
@@ -55,7 +56,7 @@ button{
     vertical-align: middle;
 }
 
-
+/*  UTILITIES */
 /* CURSOR */
     /* Style for the custom circular cursor */
     .custom-cursor {
@@ -73,6 +74,37 @@ button{
         z-index: 10000; /* Make sure it's on top */
       }
 /* end CURSOR */
+
+
+
+/* Section header */
+
+.section-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    margin-bottom: 4em;
+}
+
+.section-header h1{
+    font-size: 2.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.section-header p{
+    font-size: 1em;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+}
+/*end Section header */
+/* end UTILITIES */
 
 /* HEADER */
 .navbar-container{
@@ -115,7 +147,7 @@ button{
     background: none;
     padding: 0.8em 2.5em;
     font-size: 1em;
-    cursor: pointer;
+    cursor: none;
     margin: 10px;
     transition: 0.8s;
     position: relative;
@@ -239,7 +271,7 @@ section.hero-button-container{
     background: none;
     padding: 0.8em 1.7em;
     font-size: 1em;
-    cursor: pointer;
+    cursor: none;
     margin: 0.7em;
     transition: 0.8s;
     position: relative;
@@ -257,8 +289,8 @@ section.hero-button-container{
 }
 
 .hero-button-container .btn3:hover{
-    background-color: #333fc3;
-    border: 1px solid #333fc3;
+    background-color: var(--color-dark-primary);
+    border: 1px solid var(--color-dark-primary);
 }
 /* end HERO */
 
@@ -288,23 +320,6 @@ section.hero-img-container{
         align-items: center;
     }
 
-    .features-header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5em;
-        margin-bottom: 4em;
-    }
-
-    .features-header h1{
-        font-size: 2.2em;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .fade-up {
         opacity: 0;
         transform: translateY(20px);
@@ -316,17 +331,6 @@ section.hero-img-container{
         transform: translateY(0);
     }
     
-
-    .features-header p{
-        font-size: 1em;
-        font-weight: 500;
-        width: 60%;
-        text-align: center;
-    }
-
-
-
-
     .features-flex-container{
         display: flex;
     }
@@ -334,8 +338,6 @@ section.hero-img-container{
     .features-img-container img{
         width: 60%;
     }
-
-
 
     .features-text-container{
         display: flex;
@@ -363,10 +365,103 @@ section.hero-img-container{
 
 
 
+/* CONTENTS */
+section.contents-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 8em;
+    padding-right: 8em;
+}
+
+.contents-cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em
+}
+
+.contents-card{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 4em;
+}
+
+.contents-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 2em; */
+}
+
+.contents-card-header h3{
+    font-size: 1.15em;
+    font-weight: 600;
+}
+
+.contents-card-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-card-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents-card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-card-img:nth-child(1){
+    padding-top: 1em;
+}
+
+.contents-card-img img{
+    width: 80%;
+}
+
+
+.contents-container .btn {
+    border: 1px solid var(--color-white);
+    background: none;
+    padding: 0.8em 2.5em;
+    font-size: 1em;
+    cursor: none;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.contents-container .btn3{
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+}
+
+.contents-container .btn3:hover{
+    background-color: var(--color-dark-primary);
+    border: 1px solid var(--color-dark-primary);
+}
+/* end CONTENTS */
+
+
+
 
 /* FOOTER */
 .footer-container{
     padding: 2em 4em;
+    padding-bottom: 6em;
     display: flex;
     align-items:flex-start;
     justify-content: space-around;
@@ -439,3 +534,76 @@ section.hero-img-container{
 /* end FOOTER */
 
 
+/* ANIMATIONS */
+/* button and a tag animation */
+button.animate i {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+    button.animate:hover i, button.animate:focus i, button.animate:active i {
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  
+  
+    a.animate i {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+    a.animate:hover i, a.animate :focus i, a.animate :active i {
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  
+  
+  @-webkit-keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px); }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px); }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px); }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+  @keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px); }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px); }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px); }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px); }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px); }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); } }
+  
+  
+  /*# sourceMappingURL=style.css.map */
+  /* end button and a tag animation */
+  

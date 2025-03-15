@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //features h1 fade up
 document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.features-header h1');
+    // Select all h1 elements inside .section-header
+    const headers = document.querySelectorAll('.section-header h1');
 
     const observerOptions = {
         threshold: 0.1
@@ -58,8 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    observer.observe(header);
+    // Observe each header
+    headers.forEach(header => observer.observe(header));
 });
+
 
 
 
