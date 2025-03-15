@@ -264,8 +264,32 @@ section.hero-img-container{
 
 /* FEATURES */
     section.features-container{
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .features-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .features-header h1{
+        font-size: 2.2em;
+        font-weight: 500;
+    }
+
+    .features-header p{
+        font-size: 1em;
+        font-weight: 500;
+        width: 60%;
+        text-align: center;
+    }
+
 /* end FEATURES  */
 
 
