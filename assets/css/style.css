@@ -3,6 +3,7 @@
 
 /* reset */
 * {
+    cursor: none; /* Hides the default cursor */
     margin: 0;
     padding: 0;
     -moz-box-sizing: border-box;
@@ -55,6 +56,23 @@ button{
 }
 
 
+/* CURSOR */
+    /* Style for the custom circular cursor */
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--color-primary); /* Primary color */
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        will-change: transform, opacity;
+        transition: opacity 0.2s ease;
+        z-index: 10000; /* Make sure it's on top */
+      }
+/* end CURSOR */
 
 /* HEADER */
 .navbar-container{
@@ -276,12 +294,30 @@ section.hero-img-container{
         align-items: center;
         justify-content: center;
         gap: 1.5em;
+        margin-bottom: 4em;
     }
 
     .features-header h1{
         font-size: 2.2em;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    
+
+    .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .fade-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 
     .features-header p{
         font-size: 1em;
@@ -289,6 +325,42 @@ section.hero-img-container{
         width: 60%;
         text-align: center;
     }
+
+    .features-flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+        align-items: center;
+    }
+
+    .features-img-container{
+        border: 1px solid yellow;
+        width: 80%;
+    }
+
+    .features-img-container img{
+        width: 75%;
+        height: auto;
+    }
+
+    .features-text-container{
+        width: 50%;
+    }
+
+    .features-card{
+        border: 1px solid red ;
+        width: 60%;
+    }
+
+    .features-card-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        gap: 1em;
+    }
+    
 
 /* end FEATURES  */
 
