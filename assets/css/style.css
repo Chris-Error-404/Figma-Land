@@ -1,7 +1,7 @@
 /* import work sans font from googleapis */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
 
-/* reset */
+/* RESET */
 * {
     cursor: none; /* Hides the default cursor */
     margin: 0;
@@ -12,7 +12,7 @@
     font-family: 'Work Sans', Arial, sans-serif;
 }
 
-/* root */
+/* ROOT */
 :root{
     --color-white: #fff;
     --color-light-grey: #f4f4f4;
@@ -21,6 +21,8 @@
     --color-dark-primary: #333fc3;
 }
 
+
+/* GLOBAL CSS */
 html{
     scroll-behavior: smooth;
 
@@ -55,6 +57,8 @@ ul{
 button{
     vertical-align: middle;
 }
+/* end  GLOBAL CSS */
+
 
 /*  UTILITIES */
 /* CURSOR */
@@ -77,8 +81,7 @@ button{
 
 
 
-/* Section header */
-
+/* GENERAL SECTION HEADER */
 .section-header{
     display: flex;
     flex-direction: column;
@@ -103,10 +106,11 @@ button{
     width: 60%;
     text-align: center;
 }
-/*end Section header */
+/*end GENERAL SECTION HEADER */
 /* end UTILITIES */
 
 /* HEADER */
+/* NAVBAR */
 .navbar-container{
     width: 100%;
     display: flex;
@@ -114,7 +118,6 @@ button{
     justify-content: space-around;
     padding: 1em;
     padding-right: 1.8em; /* to balance the other space mad eny the logo in the right side */
- 
 }
 
 .navbar-logo-container img{
@@ -128,12 +131,10 @@ button{
     gap: 3em;
 }
 
-
 .navbar-items-container a{
     color: var(--color-white);
     transition: all 0.5s ease;
 }
-
 .navbar-items-container a:hover{
     color: var(--color-primary);
 }
@@ -142,7 +143,7 @@ button{
     text-align: center;
 }
 
-.login-container .btn {
+.login-container .btn { /* alsmost general btn styling */
     border: 1px solid var(--color-white);
     background: none;
     padding: 0.8em 2.5em;
@@ -182,6 +183,7 @@ button{
 .btn2:hover::before {
     height: 180%;
 }
+/* end NAVBAR */
 /* end HEADER */
 
 
@@ -409,7 +411,6 @@ section.contents-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 2em; */
 }
 
 .contents-card-header h3{
@@ -466,7 +467,6 @@ section.contents-container{
     border: 1px solid var(--color-dark-primary);
 }
 /* end CONTENTS */
-
 
 
 
