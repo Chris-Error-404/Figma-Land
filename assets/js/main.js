@@ -1,4 +1,30 @@
+//SECTION HEADER FADE UP SCRIPT
 document.addEventListener('DOMContentLoaded', function() {
+    // Select all h1 elements inside .section-header
+    const headers = document.querySelectorAll('.section-header h1');
+
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible'); // Remove class when out of view
+            }
+        });
+    }, observerOptions);
+
+    // Observe each header
+    headers.forEach(header => observer.observe(header));
+});
+
+
+
+//  HERO TEXT FADE UP SCRIPT
+ocument.addEventListener('DOMContentLoaded', function() {
     const headers = document.querySelectorAll('.hero-text-1 h1');
 
     const observerOptions = {
@@ -40,10 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//features h1 fade up
+
+
+//HERO IMAGE FADE UP SCRIPT
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all h1 elements inside .section-header
-    const headers = document.querySelectorAll('.section-header h1');
+    const heroSection = document.querySelector('.hero-img-container');
 
     const observerOptions = {
         threshold: 0.1
@@ -54,15 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
             } else {
-                entry.target.classList.remove('is-visible'); // Remove class when out of view
+                entry.target.classList.remove('is-visible');
             }
         });
     }, observerOptions);
 
-    // Observe each header
-    headers.forEach(header => observer.observe(header));
+    observer.observe(heroSection);
 });
-
 
 
 
