@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //  HERO TEXT FADE UP SCRIPT
-ocument.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const headers = document.querySelectorAll('.hero-text-1 h1');
 
     const observerOptions = {
