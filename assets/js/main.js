@@ -91,6 +91,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//TESTIMONIAL CARD FADE UP SCRIPT
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all testimonial cards
+    const cards = document.querySelectorAll('.testimonial-card');
+  
+    const observerOptions = {
+      threshold: 0.1
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, observerOptions);
+  
+    // Observe each card in the grid
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  });
+  
+
+
 //CUSTOM CURSOR SCRIPT
 (function() {
     // Create and append the custom cursor element
