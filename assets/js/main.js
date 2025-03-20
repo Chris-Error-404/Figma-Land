@@ -114,7 +114,69 @@ document.addEventListener('DOMContentLoaded', function() {
     cards.forEach(card => {
       observer.observe(card);
     });
+});
+
+
+
+// GALLery image script
+document.addEventListener('DOMContentLoaded', function() {
+    // Track scroll direction
+    let lastScrollY = window.scrollY;
+    let scrollDirection = 'down';
+  
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > lastScrollY) {
+        scrollDirection = 'down';
+      } else {
+        scrollDirection = 'up';
+      }
+      lastScrollY = window.scrollY;
+    });
+  
+    // Select all images in the gallery container
+    const images = document.querySelectorAll('.gallery-flex-container img');
+  
+    const observerOptions = {
+      threshold: 0.1
+    };
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const img = entry.target;
+        if (entry.isIntersecting) {
+          // Get the parent row and determine the image's index within that row
+          const row = img.parentElement;
+          const imagesInRow = Array.from(row.querySelectorAll('img'));
+          const index = imagesInRow.indexOf(img);
+          const total = imagesInRow.length;
+          const delayInterval = 0.2; // seconds
+  
+          // Compute delay based on scroll direction
+          let delay;
+          if (scrollDirection === 'down') {
+            delay = index * delayInterval;
+          } else {
+            delay = (total - index - 1) * delayInterval;
+          }
+          // Set inline transition delay for a staircase effect
+          img.style.transitionDelay = `${delay}s`;
+          img.classList.add('is-visible');
+        } else {
+          // Remove the visible class and reset delay when image leaves the viewport
+          img.classList.remove('is-visible');
+          img.style.transitionDelay = '';
+        }
+      });
+    }, observerOptions);
+  
+    images.forEach(img => {
+      observer.observe(img);
+    });
   });
+  
+  
+
+
   
 
 

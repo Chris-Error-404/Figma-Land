@@ -347,34 +347,51 @@ section.hero-img-container{
     
     .features-flex-container{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .features-img-container img{
-        width: 60%;
+    .features-flex-container img{
+        width: 50%;
     }
 
-    .features-text-container{
+    .features-text{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content: left;
+        gap: 1.5em;
     }
 
-   .features-card-header{
+    .features-card{
         display: flex;
+        flex-direction: column;
         justify-content: left;
+        gap: 0.5em;
+    }
+
+    .features-card-top img{
+        width: 5%;
+    }
+    .features-card-top{
+        display: flex;
+        gap: 1em;
+        justify-content: center;
         align-items: center;
-   }
+    }
 
-   .features-card-header h3{
-        font-size: 1.2em;
+    .features-card-top h1{
+        font-size: 1.1em;
         font-weight: 600;
-   }
-
-   .features-card-text{
-    text-align: left;
-    width: 60%;
-   }
+    }
+    
+    .features-card-bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
 /* end FEATURES  */
 
 
@@ -513,6 +530,16 @@ section.testimonial-container{
     transform: scale(1.02);
 }
 
+
+/* hover opacity styling*/
+/* When any card is hovered, make non-hovered cards semi-transparent */
+.testimonial-grid-container:has(.testimonial-card:hover) .testimonial-card:not(:hover) {
+    opacity: 0.4;
+  }
+  
+/*end  hover opacity styling*/
+
+
 .testimonial-card-top{
     display: flex;
     justify-content: left;
@@ -558,44 +585,81 @@ section.testimonial-container{
 .testimonial-card-bottom i{
     color: var(--color-white);
 }
-/* 
-@keyframes star-pulse{
-    0%{
-        transform: scale(1);
-        color: var(--color-white);
-    }
-
-    50%{
-        transform: scale(1.05);
-        color: var(--color-primary);
-    }
-    
-    100%{
-        transform: scale(1);
-        color: var(--color-white);
-    }
-} */
-
-/* .animated-star{
-    font-size: 1em;
-    animation: star-pulse 3s infinite ease;
-} */
-
-
-/*  @keyframes twinkle{
-    0%, 100% {opacity: 1;}
-    50%{opacity: 0.5;}
- }
-
- .animated-star{
-    animation: twinkle 1s infinite;
-}
- */
-
-
-
 /* end TESTIMONIALS */
 
+
+/* GALLERY */
+section.gallery-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 8em;
+    padding-right: 8em;
+    margin-top: 4em;
+}
+
+.gallery-flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em; /* gap roe */
+}
+
+.gallery-flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em; /* gap column */
+}
+
+.gallery-flex-row img{
+    border-radius: 8px;
+    width: 20%;
+    transition: all 0.5s ease;
+}
+
+
+/* setpping stone effect */
+.gallery-flex-container img {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .gallery-flex-container img.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+/* end effect */
+
+.gallery-flex-row img:hover {
+    transform: translateY(0) scale(1.03);
+  }
+  
+
+
+div.gallery-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+
+div.gallery-button button{
+    border: 1px solid var(--color-white);
+    background: none;
+    padding: 0.8em 2.5em;
+    font-size: 1em;
+    cursor: none;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* end GALLERY */
 
 
 /* PARTNERS */
@@ -608,6 +672,7 @@ section.partners-container{
     padding-right: 8em;
     margin-top: 4em;
 }
+
 
 .partners-logo-container{
     display: flex;
@@ -669,6 +734,7 @@ section.variable-container{
 .variable-inner-text h1{
     font-size: 2.5em;
     font-weight: 500;
+    line-height: 0.8em;
     margin-bottom: 0.6em;
 }
 
