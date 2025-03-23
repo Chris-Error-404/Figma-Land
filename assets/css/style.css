@@ -10,14 +10,14 @@
 
 /* RESET */
 * {
-    cursor: none; /* Hides the default cursor */
+    cursor: none; /* Hides the default cursor for custom cursor */
     margin: 0;
     padding: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Work Sans', Arial, sans-serif;
-}
+} 
 
 /* ROOT */
 :root{
@@ -97,13 +97,12 @@ button{
 
 .section-heading h1{
     font-family: "Graphik";
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 .section-heading p{
     font-size: 1em;
@@ -112,6 +111,67 @@ button{
     text-align: center;
 }
 /*end GENERAL SECTION HEADER */
+
+
+/* BUTTON */
+/* base button for shape and width */
+.base-btn{
+    padding: 0.8em 2.2em;
+    font-size: 1em;
+    cursor: none;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    min-width: 15%;
+}
+
+.base-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--color-primary);
+    z-index: -1;
+    transition: 0.8s;
+}
+/* end base button */
+
+/* clear button for the hover animation */
+.clr-btn{
+    border: 1px solid var(--color-white);
+    background: none;
+    color: var(--color-white);
+}
+
+.clr-btn::before {
+    bottom: 0;
+    border-radius: 0 0 0 0;
+}
+
+.clr-btn:hover::before {
+    height: 180%;
+}
+
+.clr-btn:hover{
+    border: 1px solid var(--color-primary);
+}
+/* clear button */
+
+/* colored button*/
+.pry-btn{
+    border: 1px solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-white);  
+}
+
+.pry-btn:hover{
+    background: var(--color-dark-primary);
+}
+/* end colored button */
+
+
+
 /* end UTILITIES */
 
 /* HEADER */
@@ -122,7 +182,7 @@ button{
     align-items: center;
     justify-content: space-around;
     padding: 1em;
-    padding-right: 1.8em; /* to balance the other space mad eny the logo in the right side */
+    padding-right: 1.8em; /* to balance the other space made by the logo in the right side */
 }
 
 .navbar-logo-container img {
@@ -146,47 +206,6 @@ button{
 
 .login-container {
     text-align: center;
-}
-
-.login-container .btn { /* alsmost general btn styling */
-    border: 1px solid var(--color-white);
-    background: none;
-    padding: 0.8em 2.5em;
-    font-size: 1em;
-    cursor: none;
-    margin: 10px;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn2 {
-    color: var(--color-white);
-}
-
-.btn2:hover {
-    color: #fff;
-    border: 1px solid var(--color-primary);
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: var(--color-primary);
-    z-index: -1;
-    transition: 0.8s;
-}
-
-.btn2::before {
-    bottom: 0;
-    border-radius: 0 0 0 0;
-}
-
-.btn2:hover::before {
-    height: 180%;
 }
 /* end NAVBAR */
 /* end HEADER */
@@ -248,8 +267,6 @@ div.hero-text-1 {
     transform: translateY(0);
 }
 
-
-
 div.hero-text-2{
     padding: 1em;
     padding-top: 2em;
@@ -271,37 +288,9 @@ section.hero-button-container{
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-
-.hero-button-container .btn{
-    border: 1px solid var(--color-white);
-    background: none;
-    padding: 0.8em 1.7em;
-    font-size: 1em;
-    cursor: none;
-    margin: 0.7em;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-button-container .btn3{
-    background: var(--color-primary);
-    color: var(--color-white);
-    border: 1px solid var(--color-primary);
-}
-
-.hero-button-container .btn:hover{
-    border: 1px solid var(--color-primary);
-}
-
-.hero-button-container .btn3:hover{
-    background-color: var(--color-dark-primary);
-    border: 1px solid var(--color-dark-primary);
+    gap: 1em;
 }
 /* end HERO */
-
 
 
 /* sub_hero */
@@ -309,7 +298,7 @@ section.hero-img-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 4em;
 }
 
 .hero-img-container img{
@@ -327,7 +316,6 @@ section.hero-img-container{
     opacity: 1;
     transform: translateY(0);
 }
-
 /* end sub_hero */
 
 
@@ -338,6 +326,7 @@ section.hero-img-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10rem;
     }
 
     .fade-up {
@@ -356,7 +345,7 @@ section.hero-img-container{
        justify-content: space-between;
        align-items: center;
        gap: 2em;
-       width: 80%;
+       width: 75%;
     }
 
     .features-img-text-container img{
@@ -366,12 +355,13 @@ section.hero-img-container{
     /* features-card*/
 .features-card-container{/* to give gap tp each individual-card*/
     display: flex;
-    flex-direction: column;/* 
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;/* 
     justify-content: center; */
-    gap: 2em;
+    gap: 2.5em;
 
 }
-
     .features-card{
         display: flex;
         flex-direction: column;
@@ -391,13 +381,8 @@ section.hero-img-container{
 
     .features-card-top h2{
         font-size: 1.1em;
+        font-family: "Graphik";
     }
-
-    /* .features-card-bottom{
-        width: 80%;
-    } */
-
-  
 /* end FEATURES  */
 
 
@@ -410,13 +395,12 @@ section.contents-container{
     align-items: center;
     padding-left: 8em;
     padding-right: 8em;
+    margin-bottom: 10rem;
 }
 
 .contents-cards-container{
     width: 100%;
-/*     display: flex;
-    justify-content: center;
-    align-items: center; */
+    height: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em
@@ -429,7 +413,9 @@ section.contents-container{
     display: flex;
     flex-direction: column;
     gap: 2em;
-    padding: 4em;
+    padding: 2em 4em;
+    height: auto;
+    overflow: hidden;
 }
 
 .contents-card-header{
@@ -439,14 +425,15 @@ section.contents-container{
 }
 
 .contents-card-header h3{
+    font-family: "Graphik";
     font-size: 1.15em;
-    font-weight: 600;
 }
 
 .contents-card-text{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .contents-card-button{
@@ -467,7 +454,6 @@ section.contents-container{
 .contents-card-img img{
     width: 80%;
 }
-
 
 .contents-container .btn {
     border: 1px solid var(--color-white);
@@ -502,7 +488,7 @@ section.testimonial-container{
     align-items: center;
     padding-left: 8em;
     padding-right: 8em;
-    margin-top: 4em;
+    margin-bottom: 10rem;
 }
 
 .testimonial-grid-container{
@@ -569,7 +555,7 @@ section.testimonial-container{
 }
 
 .testimonial-card-header h1{
-    font-weight: 500;
+    font-family: "Graphik";
     font-size: 1em;
 }
 
@@ -604,7 +590,7 @@ section.gallery-container{
     align-items: center;
     padding-left: 8em;
     padding-right: 8em;
-    margin-top: 4em;
+    margin-bottom: 10rem;
 }
 
 .gallery-flex-container{
@@ -678,7 +664,7 @@ section.partners-container{
     align-items: center;
     padding-left: 8em;
     padding-right: 8em;
-    margin-top: 4em;
+    margin-bottom: 10rem;
 }
 
 
@@ -701,7 +687,7 @@ div.partners-button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
 div.partners-button button{
@@ -723,7 +709,7 @@ section.variable-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4em;
+    margin-bottom: 3rem;
 }
 
 .variable-inner-container{
@@ -743,7 +729,7 @@ section.variable-container{
     font-family: "Graphik";
     font-size: 2.5em;
     font-weight: 500;
-    line-height: 1em;
+    line-height: 1.2em;
     margin-bottom: 0.6em;
 }
 
@@ -919,8 +905,6 @@ button.animate i {
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
-  
-  
   /*# sourceMappingURL=style.css.map */
   /* end button and a tag animation */
   
