@@ -132,10 +132,37 @@ section.gallery-container{
 div.gallery-button{
     margin-top: 2em;
 }
+/* end galery */
 
 
 
- section.testimonial-container, section.partners-container, section.variable-container, .footer-container {
+/* partners */
+section.partners-container{
+    padding: 1em;
+    margin-bottom: 5rem;
+}
+
+.partners-logo-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 1em; /* Adjust the gap to control spacing between items */
+}
+
+.partners-logo-container img{
+    width: 70%;
+}
+
+.partners-logo-container img:nth-child(6){ /* to target the ibm logo for custom width */
+    width: 90%;
+}
+
+
+
+
+ section.testimonial-container,section.variable-container, .footer-container {
         display: none;
     }
 
