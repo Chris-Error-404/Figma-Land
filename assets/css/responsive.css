@@ -25,7 +25,7 @@
     }
 
     .navbar-logo-container img{
-        width: 80%
+        width: 90%
     }
 
     .login-container .base-btn{
@@ -181,7 +181,8 @@ section.testimonial-container{
     justify-content: center;
     align-items: center;
     gap: 1.5em;
-    padding: 1em;
+    padding: 0.5em;
+    margin-top: 0;
 }
 
 .testimonial-card-top img{
