@@ -12,10 +12,26 @@
         width: 80%
     }
 
+    .login-container .base-btn{
+        padding: 0.6em 2em;
+    }
+
+    div.hero-text-1 {
+        gap: 1em;
+    }
+
     .hero-text-1 h1{
         font-size: 2em;
     }
 
+    div.hero-text-2{
+        width: 95%;
+    }
+
+    section.hero-button-container{
+        flex-direction: column;
+        gap: 1.2em;
+    }
 
     section.features-container, section.contents-container, section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
         display: none;
