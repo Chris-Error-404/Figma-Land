@@ -16,6 +16,8 @@
     
     .navbar-container{
         padding: 1;
+        align-items: center;
+        justify-content: space-between;
     }
     
     .navbar-items-container{
