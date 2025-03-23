@@ -15,7 +15,7 @@
     }
     
     .navbar-container{
-        padding: 0;
+        padding: 1;
     }
     
     .navbar-items-container{
@@ -269,6 +269,24 @@ section.testimonial-container{
     justify-content: center;
 }
 
+
+.hambuger-mnu-wrapper{
+    display: block;
+  }
+
 }
 
-/* end HEADER */
+
+@media (max-width: 1024px) {
+    .overlay{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+
+
+
+
+
+

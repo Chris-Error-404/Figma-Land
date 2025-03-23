@@ -868,3 +868,115 @@ button.animate i {
   /*# sourceMappingURL=style.css.map */
   /* end button and a tag animation */
   
+
+  /* hamburger menu styling (mobile)*/ 
+.hambuger-mnu-wrapper{
+    display: none;
+  }
+  
+.hambuger-mnu-wrapper button{
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+  }
+  
+.hambuger-mnu-wrapper i{
+    color: var(--color-white) !important;
+    font-size: 2em;
+    font-weight: 400;
+    border-radius: 5px ;
+    padding: 0.2em;
+  }
+  
+  /* end hamburger menu styling (mobile)
+
+
+  /* OVERLAY */
+.overlay{
+    position: fixed;
+    display: none;
+    background-color: var(--color-black);
+    width: 80%;
+    position: fixed;
+    z-index:10;
+    transform: translateX(100%); /* makes it open from the left to the right*/
+    height: 100%;
+    min-height: 100vh;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  
+  .overlay.open{
+    transform: translateX(0);
+  }
+  
+  /* overlay styling */
+  .overlay-header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  .overlay button{
+    background-color: var(--color-black);
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .overlay a{
+    color: var(--color-white);
+    font-weight: 500;
+  }
+  
+  .overlay .overlay-header i{
+    color: var(--color-white);
+    font-size: 2.5em;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .overlay .overlay-header i:hover{
+    color: var(--color-primary);
+  }
+  .overlay .overlay-header i:active{
+    color: var(--color-primary);
+  }
+  .overlay .overlay-header i:focus{
+    color: var(--color-oprimary);
+  }
+  
+  .overlay .mobile-nav-items-container{
+    padding: 1em;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  
+  .overlay .mobile-nav-items-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1em;
+  }
+  
+  .overlay .mobile-nav-items-container li{
+    padding: 0.3em;
+    padding-left: 1.5em;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .overlay .mobile-nav-items-container li:hover .mobile-nav-items-container a {
+    color: var(--color-primary);
+  }
+  
+  .overlay .mobile-nav-items-container .dropdown i{
+    margin-left: 0.5em;
+  }
+  
+  /* end OVERLAY */
