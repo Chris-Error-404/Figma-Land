@@ -5,6 +5,10 @@
         display: none;
     }
 
+    .navbar-logo-container img{
+        width: 60%
+    }
+
     .hero-text-1 h1{
         font-size: 2em;
     }
