@@ -1,7 +1,7 @@
 /* HEADER */
 @media (max-width:1024px){
     .navbar-container{
-        padding: 0;
+        padding: 0.5;
     }
     
     .navbar-items-container{
