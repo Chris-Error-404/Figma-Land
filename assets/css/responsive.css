@@ -64,6 +64,22 @@ section.features-container{
     padding: 1em;
 }
 
+.features-img-text-container{
+    flex-direction: column;
+    gap: 3em;
+    width: 100%;
+    padding: 1em;
+}
+
+.features-img-text-container img{
+    width: 100%;
+}
+
+.features-card-top img{
+    width: 10%;
+}
+
+
 
 
 
