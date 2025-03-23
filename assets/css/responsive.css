@@ -1,7 +1,8 @@
 /* HEADER */
 @media (max-width:1024px){
     .base-btn{
-        padding: 0.6em 2em;
+        padding: 0.8em 2.2em;
+        min-width: 60%
     }
     
     .navbar-container{
