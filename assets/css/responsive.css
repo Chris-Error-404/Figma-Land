@@ -6,7 +6,7 @@
     }
 
     .navbar-logo-container img{
-        width: 70%
+        width: 80%
     }
 
     .hero-text-1 h1{
@@ -18,8 +18,6 @@
         display: none;
     }
 
-
-    /* end HEADER */
 }
 
 /* end HEADER */
