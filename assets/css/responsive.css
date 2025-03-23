@@ -162,15 +162,46 @@ section.partners-container{
 div.partners-button{
     margin-top: 2em;
 }
+/* end partners */
+
+
+
+/* testimonials */
+section.testimonial-container{
+    padding: 1em;
+    margin-bottom: 5rem;
+}
+
+
+.testimonial-grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+.testimonial-card-top img{
+    width: 20%;
+}
+/* testimonials */
 
 
 
 
- section.testimonial-container,section.variable-container, .footer-container {
+section.variable-container, .footer-container {
         display: none;
     }
 
-
+.testimonial-grid-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+    
 
 
 }
