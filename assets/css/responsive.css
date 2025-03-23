@@ -1,0 +1,30 @@
+/* HEADER */
+@media (max-width:1024px){
+    
+    .navbar-items-container{
+        display: none;
+    }
+
+    .hero-text-1 h1{
+        font-size: 2em;
+    }
+
+    /* HEADER */
+    @media (max-width:1024px){
+        
+        .navbar-items-container{
+            display: none;
+        }
+
+        .hero-text-1 h1{
+            font-size: 2em;
+        }
+        section.features-container, section.contents-container, section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
+            display: none;
+        }
+    }
+
+    /* end HEADER */
+}
+
+/* end HEADER */
