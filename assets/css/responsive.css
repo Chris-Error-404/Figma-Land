@@ -4,6 +4,14 @@
         padding: 0.8em 2.2em;
         min-width: 60%
     }
+
+    .section-heading h1{
+        font-size: 1.5em;
+    }
+
+    .section-heading p{
+        width: 100%;
+    }
     
     .navbar-container{
         padding: 0;
@@ -23,11 +31,12 @@
 
     div.hero-text-1 {
         gap: 1em;
-        width: 95%;
+        width: 80%;
+        
     }
 
     .hero-text-1 h1{
-        font-size: 2.2em
+        font-size: 2em;
     }
 
     div.hero-text-2{
@@ -46,10 +55,25 @@
     .hero-img-container img{
         width: 150%;
     }
+/* end hero section*/ 
+
+
+/* Features */
+section.features-container{
+    margin-top: 3rem;
+    padding: 1em;
+}
+
+
+
+
 
 section.contents-container, section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
         display: none;
     }
+
+
+
 
 }
 
