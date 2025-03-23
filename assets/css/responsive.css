@@ -1,5 +1,8 @@
 /* HEADER */
 @media (max-width:1024px){
+    .navbar-container{
+        padding: 0;
+    }
     
     .navbar-items-container{
         display: none;
