@@ -83,12 +83,40 @@ section.features-container{
     font-weight: 600;
 }
 
+/* end features */
+
+
+/* contents */
+section.contents-container{
+    justify-content: center;
+    padding: 1em;
+}
+
+.contents-cards-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contents-card{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    height: auto;
+    overflow: hidden;
+}
+
+
+/* end contents */
 
 
 
 
-
-section.contents-container, section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
+ section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
         display: none;
     }
 
