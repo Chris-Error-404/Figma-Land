@@ -225,6 +225,25 @@ section.testimonial-container{
     
 
 /* footer */
+.footer-container{
+    padding: 1em 2em;
+    padding-bottom: 6em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+
+.footer-navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 2em; /* gap between each <ul> */
+}
+
+.footer-socials{
+    margin-top: 1em;
+}
 
 }
 
