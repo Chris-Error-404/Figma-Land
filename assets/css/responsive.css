@@ -185,14 +185,6 @@ section.testimonial-container{
 .testimonial-card-top img{
     width: 20%;
 }
-/* testimonials */
-
-
-
-
-section.variable-container, .footer-container {
-        display: none;
-    }
 
 .testimonial-grid-container{
     display: flex;
@@ -201,8 +193,38 @@ section.variable-container, .footer-container {
     align-items: center;
     gap: 1.5em;
 }
+
+/*end  testimonials */
+
+
+
+/*variables */
+.variable-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #343434;
+    border-radius: 0px;
+    width: 100%;
+} 
+
+.variable-inner-text{
+    padding: 2em;
+    text-align: center;
+}
+
+.variable-inner-text h1{
+    font-family: "Graphik";
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 1em;
+}
+/* end variables */
     
 
+/* footer */
 
 }
 
