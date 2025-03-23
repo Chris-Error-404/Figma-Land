@@ -1,5 +1,9 @@
 /* HEADER */
 @media (max-width:1024px){
+    .base-btn{
+        padding: 0.6em 2em;
+    }
+    
     .navbar-container{
         padding: 0;
     }
@@ -41,7 +45,7 @@
         width: 150%;
     }
 
-    section.features-container, section.contents-container, section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
+section.contents-container, section.testimonial-container, section.gallery-container, section.partners-container, section.variable-container, .footer-container {
         display: none;
     }
 
