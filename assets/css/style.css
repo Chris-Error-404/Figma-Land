@@ -176,7 +176,7 @@ button{
 
 /* HEADER */
 /* NAVBAR */
-
+.navbar-container{
     width: 100%;
     display: flex;
     align-items: center;
@@ -905,6 +905,7 @@ button.animate i {
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
+
   /*# sourceMappingURL=style.css.map */
   /* end button and a tag animation */
   
