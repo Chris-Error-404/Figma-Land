@@ -23,6 +23,7 @@
 :root{
     --color-white: #fff;
     --color-light-grey: #f4f4f4;
+    --color-dark-grey: #343434;
     --color-black: #000;
     --color-primary: #4452fe;
     --color-dark-primary: #333fc3;
@@ -693,7 +694,7 @@ section.variable-container{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    background-color: #343434;
+    background-color: var(--color-dark-grey);
     border-radius: 15px;
     width: 80%;
 }
@@ -895,7 +896,7 @@ button.animate i {
 .overlay{
     position: fixed;
     display: none;
-    background-color: var(--color-black);
+    background-color: #212121;
     width: 80%;
     position: fixed;
     z-index:10;
@@ -921,7 +922,7 @@ button.animate i {
   }
   
   .overlay button{
-    background-color: var(--color-black);
+    background-color: #212121;
     outline: none;
     border: none;
     cursor: pointer;
@@ -975,8 +976,9 @@ button.animate i {
     color: var(--color-primary);
   }
   
-  .overlay .mobile-nav-items-container .dropdown i{
+  .overlay .mobile-nav-items-container i{
     margin-left: 0.5em;
+    color: var(--color-primary);
   }
   
   /* end OVERLAY */

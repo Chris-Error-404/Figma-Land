@@ -243,7 +243,7 @@ section.testimonial-container{
 /* footer */
 .footer-container{
     padding: 1em 2em;
-    padding-bottom: 6em;
+    padding-bottom: 4em;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -267,7 +267,7 @@ section.testimonial-container{
 
 .footer-socials{
     width: 100%;
-    margin-top: 1em;
+    margin-top: 2em;
     justify-content: center;
 }
 
