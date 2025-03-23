@@ -79,6 +79,10 @@ section.features-container{
     width: 8%;
 }
 
+.features-card-top h2{
+    font-weight: 600;
+}
+
 
 
 
