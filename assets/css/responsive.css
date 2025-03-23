@@ -23,10 +23,11 @@
 
     div.hero-text-1 {
         gap: 1em;
+        width: 95%;
     }
 
     .hero-text-1 h1{
-        font-size: 2em;
+        font-size: 2.2em
     }
 
     div.hero-text-2{
