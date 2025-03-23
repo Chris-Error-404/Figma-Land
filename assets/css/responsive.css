@@ -241,8 +241,18 @@ section.testimonial-container{
     gap: 2em; /* gap between each <ul> */
 }
 
+.footer-navbar a{
+    color: #f5f5f5;
+}
+
+.footer-contact{
+    width: 100%;
+}
+
 .footer-socials{
+    width: 100%;
     margin-top: 1em;
+    justify-content: center;
 }
 
 }
