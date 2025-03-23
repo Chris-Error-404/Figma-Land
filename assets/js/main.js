@@ -1,7 +1,7 @@
 //SECTION HEADER FADE UP SCRIPT
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all h1 elements inside .section-header
-    const headers = document.querySelectorAll('.section-header h1');
+    // Select all h1 elements inside .section-heading
+    const headers = document.querySelectorAll('.section-heading h1');
 
     const observerOptions = {
         threshold: 0.1

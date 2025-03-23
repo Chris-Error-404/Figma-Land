@@ -1,5 +1,12 @@
 /* import work sans font from googleapis */
+/* font for regular text */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+/* The exact font for headings in the figma desgin */
+@font-face {
+    font-family: "Graphik";
+    src: url(/assets/css/font/Graphik-Regular-Trial.otf) format("opentype");
+}
 
 /* RESET */
 * {
@@ -21,11 +28,9 @@
     --color-dark-primary: #333fc3;
 }
 
-
 /* GLOBAL CSS */
 html{
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -62,27 +67,26 @@ button{
 
 /*  UTILITIES */
 /* CURSOR */
-    /* Style for the custom circular cursor */
-    .custom-cursor {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: var(--color-primary); /* Primary color */
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        will-change: transform, opacity;
-        transition: opacity 0.2s ease;
-        z-index: 10000; /* Make sure it's on top */
-      }
+/* Style for the custom circular cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-primary); /* Primary color */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    will-change: transform, opacity;
+    transition: opacity 0.2s ease;
+    z-index: 10000; /* Make sure it's on top */
+    }
 /* end CURSOR */
 
 
-
 /* GENERAL SECTION HEADER */
-.section-header{
+.section-heading{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +95,8 @@ button{
     margin-bottom: 4em;
 }
 
-.section-header h1{
+.section-heading h1{
+    font-family: "Graphik";
     font-size: 2.2em;
     font-weight: 500;
     display: flex;
@@ -100,7 +105,7 @@ button{
 }
 
 
-.section-header p{
+.section-heading p{
     font-size: 1em;
     font-weight: 500;
     width: 60%;
@@ -120,8 +125,8 @@ button{
     padding-right: 1.8em; /* to balance the other space mad eny the logo in the right side */
 }
 
-.navbar-logo-container img{
-    width: 11em;
+.navbar-logo-container img {
+    width: 100%;
 }
 
 .navbar-items-container ul{
@@ -229,6 +234,7 @@ div.hero-text-1 {
 
 /* Initial state for h1 elements */
 .hero-text-1 h1 {
+    font-family: "Graphik";
     font-size: 4em;
     font-weight: 600;
     opacity: 0;
@@ -345,53 +351,53 @@ section.hero-img-container{
         transform: translateY(0);
     }
     
-    .features-flex-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .features-img-text-container {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       gap: 2em;
+       width: 80%;
     }
 
-    .features-flex-container img{
+    .features-img-text-container img{
         width: 50%;
     }
 
-    .features-text{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5em;
-    }
+    /* features-card*/
+.features-card-container{/* to give gap tp each individual-card*/
+    display: flex;
+    flex-direction: column;/* 
+    justify-content: center; */
+    gap: 2em;
+
+}
 
     .features-card{
         display: flex;
         flex-direction: column;
+        gap: 1.3em;
+    }
+
+    .features-card-top{
+        display: flex;
         justify-content: left;
-        gap: 0.5em;
+        align-items: center;
+        gap: 1em;
     }
 
     .features-card-top img{
-        width: 5%;
-    }
-    .features-card-top{
-        display: flex;
-        gap: 1em;
-        justify-content: center;
-        align-items: center;
+        width: 6%;
     }
 
-    .features-card-top h1{
+    .features-card-top h2{
         font-size: 1.1em;
-        font-weight: 600;
     }
-    
-    .features-card-bottom{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-    }
+
+    /* .features-card-bottom{
+        width: 80%;
+    } */
+
+  
 /* end FEATURES  */
 
 
@@ -408,9 +414,11 @@ section.contents-container{
 
 .contents-cards-container{
     width: 100%;
-    display: flex;
+/*     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em
 }
 
@@ -732,9 +740,10 @@ section.variable-container{
 }
 
 .variable-inner-text h1{
+    font-family: "Graphik";
     font-size: 2.5em;
     font-weight: 500;
-    line-height: 0.8em;
+    line-height: 1em;
     margin-bottom: 0.6em;
 }
 
@@ -751,14 +760,6 @@ section.variable-container{
     overflow: hidden;
 }
 
-
-/* .variable-inner-text .btn3{
-    background: var(--color-primary);
-    color: var(--color-white);
-    border: 1px solid var(--color-primary);
-}
-    */
-
 .variable-inner-text .btn3:hover{
     background-color: var(--color-dark-primary);
     border: 1px solid var(--color-dark-primary);
@@ -766,11 +767,10 @@ section.variable-container{
 
 .variable-inner-img{
     padding: 2em;
-    width: 50%;
 }
 
 .variable-inner-img img{
-    width: 80%;
+    width: 100%;
 }
 /* end VARIABLE */
 
@@ -793,8 +793,8 @@ section.variable-container{
 }
 
 .footer-navbar h4{
-    font-weight: bolder;
-    font-size: 1.2em;
+    font-family: "Graphik";
+    font-size: 1.1em;
     margin-bottom: 0.5em;
 }
 
