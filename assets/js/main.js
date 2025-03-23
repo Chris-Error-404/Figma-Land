@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const imagesInRow = Array.from(row.querySelectorAll('img'));
           const index = imagesInRow.indexOf(img);
           const total = imagesInRow.length;
-          const delayInterval = 0.2; // seconds
+          const delayInterval = 0.1; // seconds
   
           // Compute delay based on scroll direction
           let delay;
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => {
       observer.observe(img);
     });
-  });
+});
   
   
 
