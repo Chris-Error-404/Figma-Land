@@ -116,20 +116,9 @@ section.gallery-container{
     margin-bottom: 5rem;
 }
 
-.gallery-flex-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-}
-
 .gallery-flex-row{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em; /* gap column */
+
 }
 
 .gallery-flex-row:nth-child(2){
@@ -137,10 +126,13 @@ section.gallery-container{
 }
 
 .gallery-flex-row img{
-    border-radius: 8px;
     width: 100%;
-    transition: all 0.5s ease;
 }
+
+div.gallery-button{
+    margin-top: 2em;
+}
+
 
 
  section.testimonial-container, section.partners-container, section.variable-container, .footer-container {
