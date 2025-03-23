@@ -1,5 +1,13 @@
 /* HEADER */
 @media (max-width:1024px){
+    *{
+        cursor: default;
+    }
+
+    .custom-cursor{
+        display: none;
+    }
+
     .base-btn{
         padding: 0.8em 2.2em;
         min-width: 60%
