@@ -61,6 +61,7 @@
 /* Features */
 section.features-container{
     margin-top: 3rem;
+    margin-bottom: 5rem;
     padding: 1em;
 }
 
@@ -99,15 +100,11 @@ section.contents-container{
 }
 
 .contents-card{
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
     padding: 2em;
-    height: auto;
-    overflow: hidden;
+}
+
+.contents-card-header h3{
+    font-weight: 600;
 }
 
 
