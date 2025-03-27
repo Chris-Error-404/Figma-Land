@@ -33,7 +33,7 @@
     }
 
     .navbar-logo-container img{
-        width: 90%
+        width: 100%
     }
 
     .login-container .base-btn{
@@ -181,7 +181,6 @@ section.testimonial-container{
     padding: 1em;
     margin-bottom: 5rem;
 }
-
 
 .testimonial-grid-container{
     display: grid;
